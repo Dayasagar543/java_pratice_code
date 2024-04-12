@@ -1,5 +1,6 @@
 public class Static {
     public static void main(String[] args) {
+
         Mobile mb1 = new Mobile();
         Mobile.Type = "smart phone";
         mb1.brand = "samson";
@@ -18,10 +19,16 @@ public class Static {
         mb4.price = 24000;
         mb4.network = "idea";
 
+        Mobile.show1(mb1);
+
         mb1.show();
         mb2.show();
         mb3.show();
         mb4.show();
+
+        // below line will enable you to load the class with out the object creation.
+
+        // Class.forName("Mobile");
 
     }
 };
