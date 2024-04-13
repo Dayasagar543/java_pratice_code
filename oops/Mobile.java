@@ -22,7 +22,7 @@ public class Mobile {
     // the static methods are called first cause the class loader loads the class
     // and initiate the class along the static method and variable,later it goes for
     // the constructor when ever it sees a object creation is initiated and if we
-    // donot create a object it won't call the static method tooo so we can call the
+    // donot create a object it won't call the static method tooo so we can call the 
     // static method or initiate the class using
     // Class.forName("class name") <<----------this is the method for initiating
     // class without creation of the object
