@@ -1,5 +1,5 @@
 
-public class Polymorphism {
+public class Method_overriding {
     public static void main(String[] args) {
         Advanced_Calculator adc = new Advanced_Calculator();
         System.out.println(adc.add(2, 3));
