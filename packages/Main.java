@@ -1,3 +1,5 @@
+import java.nio.file.LinkPermission;
+
 import other.Variables;
 import src.*;
 import up_down_casting.*;
@@ -100,6 +102,70 @@ public class Main {
 
         System.out.println(x.age);
         System.out.println(x.name);
+
+        // instead of using the string or numbers to show the status we can use the
+        // named and the way you call them is below
+        // instead of the status if you want to output the status in number just use the
+        // method ordianl this will print the number as a status
+
+        Status st = Status.Running;
+        System.out.println(st);
+
+        // System.out.println(st.getClass().getSuperclass());
+        // above method to know the superclasses
+
+        System.out.println(st.ordinal());
+        Status pd = Status.Pending;
+        System.out.println(pd);
+        Status fd = Status.Failed;
+        System.out.println(fd);
+
+        // and if you want to all the status and values you can use the method values
+        Status s[] = Status.values();
+        for (int s2 = 0; s2 < s.length; s2++) {
+            System.out.println(s[s2] + " :" + s2);
+        }
+
+        // using the named variables in the if and else condition
+        if (st == Status.Running) {
+            System.out.println("The application is booting up please wait");
+        } else if (st == Status.Pending) {
+            System.out.println("please wait while the application loads");
+        } else if (st == Status.Failed) {
+            System.out.println("try agian! ");
+        } else if (st == Status.Success) {
+            System.out.println("process completed!!");
+        }
+
+        switch (st) {
+            case Running:
+                System.out.println("The application is booting up please wait");
+                break;
+            case Pending:
+                System.out.println("please wait while the application loads");
+                break;
+            case Failed:
+                System.out.println("try agian! ");
+                break;
+            case Success:
+                System.out.println("process completed!!");
+                break;
+
+            default:
+                break;
+        }
+
+        // creating multple objects of different models and setting prices using e num
+        Laptops lp = Laptops.macbook;
+        System.out.println(lp.getPrice());
+        lp.setPrice(3000);
+        System.out.println(lp.getPrice());
+
+        Laptops lp1[] = Laptops.values();
+        for (int lp12 = 0; lp12 < lp1.length; lp12++) {
+            System.out.println(lp1[lp12] + " :   " + lp1[lp12].getPrice());
+        }
+
     }
 
 }
