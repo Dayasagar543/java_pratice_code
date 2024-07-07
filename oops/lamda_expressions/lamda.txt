@@ -1,0 +1,21 @@
+lamda expresssions are the expresssion which can be only used and  majorly used  with functional interfaces 
+
+syntax is as:
+
+<interface instaciation> refecevaialbe =()->{
+    define the code for the functional interface...
+}
+
+
+
+
+
+
+
+
+
+
+
+
+this is a ternary operator and a function
+int value =  age >18 ? true : false ;

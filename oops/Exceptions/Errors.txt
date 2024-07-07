@@ -1,0 +1,10 @@
+compile time errors :can be easily identified
+runtime errors :cannot be easily identified..execution will stop in between
+logical errors
+
+
+
+zero division expcetion
+index out of bound  expcetion
+
+

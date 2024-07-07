@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.functional_interfaces;
 
 public class Interface implements Functional_interface {
 
