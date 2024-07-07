@@ -13,7 +13,7 @@ public class Error extends Exception {
             System.out.println("something went wrong!!" + e);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e);
-        } catch (Exception e) {
+        } catch (Exception e) { // parent exception handlers should be at last
             System.out.println(e);
         }
     }

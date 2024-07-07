@@ -8,3 +8,13 @@ zero division expcetion
 index out of bound  expcetion
 
 
+
+
+able at the end indicates that they are interfaces but the throwable is only the class here .
+
+object  --->  throwable --->error     ---> cannot be handled like out of memory,vm errors,thread death,IO errors.
+                            expcetion ---> can be and should be handled by the developer 
+                            1.runtime---> arra outof bound,null pointer,athematic
+                            2.compile time
+                            3.IO
+                            4.SQL expcetion
