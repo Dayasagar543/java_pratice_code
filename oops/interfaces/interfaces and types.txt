@@ -1,0 +1,9 @@
+interfaces are majorly 3 types
+
+1.normal interfaces -interface with two or more methods delcared are called normal interfaces..
+
+2.functional interfaces - are the interfaces which will have only one function declared in it .
+(SAM) --single abstract method interface.
+
+3.marker interfaces - an empty interface without any declarations ....or empty interface
+ we can use the marker interface for serialisation and deserialzation techniques
