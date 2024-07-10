@@ -10,11 +10,20 @@ index out of bound  expcetion
 
 
 
+Exceptions are classified into 2 types they are :
+
+checked Exceptions
+unchecked expcetion
+
+
+
 able at the end indicates that they are interfaces but the throwable is only the class here .
 
 object  --->  throwable --->error     ---> cannot be handled like out of memory,vm errors,thread death,IO errors.
                             expcetion ---> can be and should be handled by the developer 
-                            1.runtime---> arra outof bound,null pointer,athematic
+                            1.runtime---> arra outof bound,null pointer,athematic these Exceptions are also called as unchecked expcetions
                             2.compile time
                             3.IO
-                            4.SQL expcetion
+                            4.SQL expcetion  ----> these expcetions are also called checked expcetions
+
+

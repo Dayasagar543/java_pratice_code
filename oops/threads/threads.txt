@@ -1,0 +1,1 @@
+threads are majorly used for parallel execution of the  process 
