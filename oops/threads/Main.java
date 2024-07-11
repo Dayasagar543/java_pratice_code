@@ -1,33 +1,42 @@
 package threads;
 
 public class Main {
+
     public static void main(String[] args) {
         // Runnable rn = new Run();//dynamic dispatch using the interface reference and
         // object or a concrete class
         // Runnable sw = new Show();
 
+        Incre in = new Incre();
+
         Runnable rn1 = () -> {
 
-            for (int i = 0; i < 20; i++) {
-                System.out.println("Run");
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
+            for (int i = 0; i <= 100000; i++) {
+                // System.out.println("Run");
+                // try {
+                // Thread.sleep(10);
+                // } catch (InterruptedException e) {
 
-                    e.printStackTrace();
-                }
+                // e.printStackTrace();
+                // }
+
+                in.increment();
+
             }
         };
 
         Runnable rn2 = () -> {
-            for (int i = 0; i < 20; i++) {
-                System.out.println("show");
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
+            for (int i = 0; i <= 100000; i++) {
+                // System.out.println("show");
+                // try {
+                // Thread.sleep(10);
+                // } catch (InterruptedException e) {
 
-                    e.printStackTrace();
-                }
+                // e.printStackTrace();
+                // }
+
+                in.increment();
+
             }
         };
         Thread t1 = new Thread(rn1);
@@ -35,6 +44,19 @@ public class Main {
 
         t1.start();
         t2.start();
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            //
+            e.printStackTrace();
+        }
+        try {
+            t2.join();
+        } catch (InterruptedException e) {
+
+            e.printStackTrace();
+        }
+        System.out.println("printing the value of  " + in.value);
 
         // the below code works with extended class of thread
 

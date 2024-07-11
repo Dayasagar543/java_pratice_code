@@ -1,0 +1,6 @@
+we have similar names for api,intereface and class
+
+
+collections is class
+collection is an intereface
+collection API is an api
