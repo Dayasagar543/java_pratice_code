@@ -1,7 +1,7 @@
 package abstarctionAbstractClasses;
 
 public abstract class Human {// an abstract class can have abstract methods as well as non abstract
-    // methods(general methods)
+    // methods(general methods) 
 
     abstract void talk();// but for abstract methods the class should be only abstract
 

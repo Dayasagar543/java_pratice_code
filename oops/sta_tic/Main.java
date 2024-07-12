@@ -9,6 +9,7 @@ public class Main {
         System.out.println("The id assigned is " + id);
 
         Static.name = "Rahul";// static variables are accessed using the class name only
+        System.out.println(Static.name);
         Static.setName("Manish");
         st.setAge(21);
         Static.setId_num("Id_E292393");

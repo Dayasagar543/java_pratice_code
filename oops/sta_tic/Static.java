@@ -5,6 +5,10 @@ public class Static {
     static String name; // static variable
     static String id_num;
 
+
+    static{
+        name="sundhar pichain";
+    }
     public int getAge() {
         return age;
     }
