@@ -141,12 +141,15 @@ public class Main {
         System.out.println(data3);
 
         Comparator<Students> cp1 = (Students o1, Students o2) -> {
-            if (o1.age > o2.age) {
-                return 1;
-            } else {
-                return -1;
-            }
+            // if (o1.age > o2.age) {
+            // return 1;
+            // } else {
+            // return -1;
+            // }
+            return o1.age > o2.age ? 1 : -1;
         };
+
+        // Comparator<Student> co=(o1,o2)->i>j?1:-1;  //this short hand code 
         Collections.sort(data3, cp1);
         System.out.println(data3);
     }
