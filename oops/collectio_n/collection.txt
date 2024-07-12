@@ -1,9 +1,10 @@
 we have similar names for api,intereface and class
 
+collections extends iterable
 
 collections is class
 collection is an intereface
-collection API is an api
+collection API is an api (collection frame work)
 
 
 collection has the following  data types to work with data:
@@ -14,5 +15,10 @@ collection has the following  data types to work with data:
 2.Queue:
         1.DeQueue
 3.Set:
-        1.Hashset
+        1.Hashset -----> doesnot have index and it doesnot give a sorted value also it only gives out unique values
+        2.Treeset-will give you sorted list as it extends abstractset<- implements->NavigableSet(interface)<----extends sorted set
         2.linked Hashset
+
+Map doesnot implement or extend but its a part of collection framework
+        keys shouldnot be reapeated this like dictionary in python
+        values can be repeated
