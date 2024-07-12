@@ -140,19 +140,14 @@ public class Main {
         data3.add(new Students(22, "shalom"));
         System.out.println(data3);
 
-        Comparator<Students> cp1 = new Comparator<Students>() {
-
-            @Override
-            public int compare(Students o1, Students o2) {
-                if (o1.age > o2.age) {
-                    return 1;
-                } else {
-                    return -1;
-                }
+        Comparator<Students> cp1 = (Students o1, Students o2) -> {
+            if (o1.age > o2.age) {
+                return 1;
+            } else {
+                return -1;
             }
-
         };
-        Collections.sort(data3,cp1);
+        Collections.sort(data3, cp1);
         System.out.println(data3);
     }
 
