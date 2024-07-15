@@ -1,0 +1,8 @@
+stream api is nothing but you create  stream data using the stream method and on that you can apply different methods supported by it.
+
+syntax:
+
+int result=data.stream();
+result.filter()
+result.reduce()
+result.map()  and so on

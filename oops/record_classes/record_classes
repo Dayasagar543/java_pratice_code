@@ -1,0 +1,3 @@
+record classes are used only for data transfer 
+
+the variables which are used for transffering the data is called as state

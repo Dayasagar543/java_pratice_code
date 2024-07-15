@@ -1,0 +1,4 @@
+lvti --------------> suppports local variable without we even declaring the data type
+
+
+we can intanciate the local variable with var keyword in the local scope just as in js ..and only aplicable for local variables

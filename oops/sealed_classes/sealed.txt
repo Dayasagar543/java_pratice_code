@@ -1,0 +1,19 @@
+sealed classes:
+
+sealed key word used to seal the implentation and extention 
+that you can write the code for the interfaces and classes and finalise them using the sealed keyword instead of final keyword.
+
+
+sealed classe: gives the permission to  some classes to extend and the extended classes should be either final or sealed  or non sealed.
+
+
+class- sealed 
+
+FINAL -will not allow to extend
+sealed - will allow to only if permitted then they will be able to extend
+nonsealed - can be extended by class but they should be given permission from the sealed class if they want to extend
+
+sealed interfaces:
+
+interfaces can be sealed or nonsealed but cannot be final as there no final concept applied for interfaces
+
