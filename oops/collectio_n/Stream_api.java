@@ -56,9 +56,22 @@ public class Stream_api {
 
         System.out.println("printing the values");
         List<Integer> data4 = Arrays.asList(1, 23, 4, 5, 5, 6, 6, 7, 7);
-        int result = data4.stream().filter(n -> n % 2 == 0).map(n -> n * 2).reduce(0, (c, e) -> c*2+e);
+        int result = data4.stream().filter(n -> n % 2 == 0).map(n -> n * 2).reduce(0, (c, e) -> c * 2 + e);
         System.out.println(result);
 
+
+        //printing the value using the stream and filter method
+        List<Integer> data5 = Arrays.asList(1, 23, 4, 5, 5, 6, 6, 7, 7);
+        Stream<Integer> sortedValues = data5.stream().filter(n -> n %1==0).sorted();
+        System.out.println("Prinitng the sorted values");
+        sortedValues.forEach(n -> System.out.print(n+" "));
+        System.out.println();
+
+
+        List<Integer> data6 = Arrays.asList(1, 23, 4, 5, 5, 6, 6, 7, 7);
+        Stream<Integer> sortedValues1 = data6.stream().parallel().filter(n -> n %1==0);
+        System.out.println("Prinitng the sorted values");
+        sortedValues1.forEach(n -> System.out.print(n+" "));
     }
 
 }
