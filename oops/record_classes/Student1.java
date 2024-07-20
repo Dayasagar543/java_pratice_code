@@ -1,4 +1,4 @@
-package oops.record_classes;
+package record_classes;
 
 //canonical constructor this will create all the required things for data transfer all the methods
 public record Student1(int s_no, String name, int age) implements Cloneable {// all the parameters being passed into the

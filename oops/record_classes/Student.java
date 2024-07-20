@@ -1,4 +1,4 @@
-package oops.record_classes;
+package record_classes;
 
 //this class is just used for data transfer so here we are almost writing 60+ line of code so instead we can use
 //  a keyword called record and this how we reduce the code

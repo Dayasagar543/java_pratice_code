@@ -1,4 +1,4 @@
-package oops.record_classes;
+package record_classes;
 
 public class Main {
     public static void main(String[] args) {

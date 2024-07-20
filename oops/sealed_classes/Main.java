@@ -1,4 +1,4 @@
-package oops.sealed_classes;
+package sealed_classes;
 
 import java.util.Comparator;
 
