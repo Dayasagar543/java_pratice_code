@@ -7,4 +7,6 @@ public class MainTest {
     public void testMain() {
 
     }
+    @Test
+    
 }
