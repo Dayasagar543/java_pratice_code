@@ -13,7 +13,16 @@ public class ShapesTest {
     }
 
     @Test
-    void testPerimeter() {
-        assertEquals(16, sp.perimeter(4),"Perimeter of the square calculation is wrong");
+    void testPerimeterSquare() {
+        assertEquals(16, sp.perimeterSquare(4),"Perimeter of the square calculation is wrong");
+    }
+    @Test
+    void testAreaRectangle() {
+        assertEquals(8, sp.areaRectangle(4, 2),"the area of rectangle is not properly calcualted");
+    }
+
+    @Test
+    void testPerimeterRectangle() {
+        assertEquals(12, sp.perimeterRectangle(4, 2),"Perimeter of the Rectangle calculation is wrong");
     }
 }
