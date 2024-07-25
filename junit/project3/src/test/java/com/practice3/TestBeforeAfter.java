@@ -8,19 +8,27 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import com.practice3.shapes.Shapes;
 
+// @TestInstance(TestInstance.Lifecycle.PER_METHOD) // this is the default behaviour
+@TestInstance(TestInstance.Lifecycle.PER_CLASS) // this would not create multiple instances for multiple methods
 public class TestBeforeAfter {
+
+    TestBeforeAfter() {
+        System.out.println("test object is created");
+    }
 
     @BeforeAll
     static void before_all() {// this method should be static so that it can be called once when ever you use
                               // @beforeall
+                              // we can remove the static key workds once we write the line 16.
         System.out.println("Before all");
     }
 
     @AfterAll
-    static void after_all() {
+    static void after_all() {// we can remove the static key workds once we write the line 16.
         System.out.println("After all");
         // this method should be static so that it can be called once when ever you use
         // @afterall
