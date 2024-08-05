@@ -17,5 +17,8 @@ public class Main {
         Binary_search bs = new Binary_search();
         int binary_value = bs.binary_search(sorted_data, 9);
         System.out.println("The index of the value   " + binary_value);
+
+        Bubble_sort bst =new Bubble_sort();
+        bst.sort_bubble(array_input1);
     }
 }
