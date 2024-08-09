@@ -7,20 +7,27 @@ import java.sql.*;//importing the sql
 // execute the query
 // process the results
 // close
-public class App 
-{
-    public static void main( String[] args ) throws Exception
-    {
-       String url="jdbc:mysql://localhost:3306/world" ;
-       String user_name="root" ;
-       String pass="root" ;
-       String query=" select * from city where name = kabul";
 
-       Class.forName("com.mysql.jdbc.Driver");
-       Connection con = DriverManager.getConnection(url, user_name, pass);
-       Statement st = con.createStatement();
-       ResultSet rs=st.executeQuery(query);
+public class App {
+    public static void main(String[] args) throws Exception {
+        // credentials required for the database
+        String url = "jdbc:mysql://localhost:3306/world";
+        String user_name = "root";
+        String pass = "root";
 
-       
+        // query
+        String query = " select district from city where name='hyderabad'";
+        
+        // Class.forName() <-------this line works in other ides as there its mandatory
+        // but for vs code it manages everything as we add the depencecies in pom file
+        Connection con = DriverManager.getConnection(url, user_name, pass);
+        Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery(query);
+        rs.next();
+        String name = rs.getString("district");
+        System.out.println(name);
+        st.close();
+        con.close();
+
     }
 }
