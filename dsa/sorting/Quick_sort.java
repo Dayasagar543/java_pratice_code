@@ -5,7 +5,8 @@ public class Quick_sort {
         }
     }
 
-    public void conquer(){
+    public void conquer() {
+        
         
     }
 
