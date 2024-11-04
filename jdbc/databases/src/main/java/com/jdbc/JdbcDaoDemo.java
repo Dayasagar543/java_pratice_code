@@ -9,27 +9,27 @@ public class JdbcDaoDemo {
         Student s1 = std_dao.getstudent(1);
         System.out.println(s1.getName());
         System.out.println(s1.getAge());
-        Student s2=new Student();
+        Student s2 = new Student();
         s2.setName("radhika");
         s2.setAge(25);
         std_dao.add_student(s2);
-       
+        std_dao.rm_student(18);
 
     }
 
 }
 
 class Student_Dao {
-    Connection con=null;
+    Connection con = null;
     Student std = new Student();
 
-    public void connect(){
+    public void connect() {
         try {
             String url = "jdbc:mysql://localhost:3306/students";
             String user = "root";
             String password = "root";
             // Class.forName(com.mysql.jdbc.Driver);
-            con = DriverManager.getConnection(url, user, password); 
+            con = DriverManager.getConnection(url, user, password);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -37,9 +37,9 @@ class Student_Dao {
 
     public Student getstudent(int roll) {
         try {
-            //the above code will make prepared statements to run not he
+            // the above code will make prepared statements to run not he
             std.setRoll_no(roll);
-            Statement st =con.createStatement();
+            Statement st = con.createStatement();
             String std_data = "select * from std_details where id =" + roll;
             ResultSet retrived_data = st.executeQuery(std_data);
             retrived_data.next();
@@ -49,21 +49,32 @@ class Student_Dao {
             int age = retrived_data.getInt("age");
             std.setName(name);
             std.setAge(age);
+            return std;
         } catch (Exception e) {
             System.out.println(e);
         }
-        return std;
+        return null;
     }
 
-    public void add_student(Student s){
+    public void add_student(Student s) {
         try {
-            String query="insert std_details(name,age) values(?,?)";
+            String query = "insert std_details(name,age) values(?,?)";
             PreparedStatement pst = con.prepareStatement(query);
-            pst.setString(1, s.getName());
-            pst.setInt(2, s.getAge());
-            pst.executeUpdate();
+            pst.executeQuery();
+
         } catch (Exception e) {
-          System.out.println(e);
+            System.out.println(e);
+        }
+    }
+
+    public void rm_student(int id) {
+        try {
+            String query = "delete from std_details where id=" + id;
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.execute();
+            System.out.println("deleted the details successfull");
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
