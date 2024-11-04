@@ -5,10 +5,10 @@ import java.sql.*;
 public class JdbcDaoDemo {
     public static void main(String[] args) {
         Student_Dao std_dao = new Student_Dao();
-        Student s1 = std_dao.getstudent(11);
+        std_dao.connect();
+        Student s1 = std_dao.getstudent(1);
         System.out.println(s1.getName());
         System.out.println(s1.getAge());
-        std_dao.connect();
         Student s2=new Student();
         s2.setName("radhika");
         s2.setAge(25);
