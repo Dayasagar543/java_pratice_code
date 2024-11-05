@@ -71,7 +71,7 @@ class Student_Dao {
         try {
             String query = "delete from std_details where id=" + id;
             PreparedStatement pst = con.prepareStatement(query);
-            pst.execute();
+            pst.executeUpdate();
             System.out.println("deleted the details successfull");
         } catch (Exception e) {
             System.out.println(e);
