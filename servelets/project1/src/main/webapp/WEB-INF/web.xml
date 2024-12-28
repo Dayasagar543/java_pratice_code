@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>project1</display-name>
+  
+  <servlet>
+  <servlet-name>add</servlet-name>
+  <servlet-class>project1.AddServelet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>add</servlet-name>
+  <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>square</servlet-name>
+  <servlet-class>project1.SquareServelet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   	<servlet-name>square</servlet-name>
+  	<url-pattern>/square</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>parameters</servlet-name>
+  <servlet-class>project1.ParametersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>parameters</servlet-name>
+  <url-pattern>/parameters</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  <param-name>Name</param-name>
+  <param-value>Dayasagar</param-value>
+  </context-param>
+  
+  <context-param>
+  <param-name>Phone</param-name>
+  <param-value>oppo</param-value>
+  </context-param>
+  
+  <context-param>
+  <param-name>Gender</param-name>
+  <param-value>male</param-value>
+  </context-param>
+  
+  
+  
+  
+  
+  
+</web-app>
